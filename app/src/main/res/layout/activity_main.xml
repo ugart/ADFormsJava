@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerCadastroUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoCongregacaoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/campoCongregacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a congregração aqui"
+                    android:inputType="textPersonName|textNoSuggestions|textCapWords"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoNome"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoNomeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoCongregacaoLayout">
+
+                <EditText
+                    android:id="@+id/campoNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite o nome aqui"
+                    android:inputType="textPersonName|textNoSuggestions|textCapWords"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoIdade"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoIdadeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoNomeLayout">
+
+                <EditText
+                    android:id="@+id/campoIdade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a idade aqui"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoEmail"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoEmailLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoIdadeLayout">
+
+                <EditText
+                    android:id="@+id/campoEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite o email aqui"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoTelefone"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoTelefoneLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoEmailLayout">
+
+                <EditText
+                    android:id="@+id/campoTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite o telefone aqui"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoNascimento"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoNascimentoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoTelefoneLayout">
+
+                <EditText
+                    android:id="@+id/campoNascimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Informe a data de nascimento aqui"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoBatismoAguas"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoBatismoAguasLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoNascimentoLayout">
+
+                <EditText
+                    android:id="@+id/campoBatismoAguas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Informe a data de Batismo em Águas aqui"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/besLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="É batizado com o Espírito Santo?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoBatismoAguasLayout" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/besSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/besLabel" />
+
+            <TextView
+                android:id="@+id/sexoLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="Sexo:"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/besSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sexoSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sexoLabel" />
+
+            <TextView
+                android:id="@+id/estadoCivilLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="Estado civil:"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sexoSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/estadoCivilSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estadoCivilLabel" />
+
+            <TextView
+                android:id="@+id/escolaridadeLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="Escolaridade:"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estadoCivilSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/escolaridadeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/escolaridadeLabel" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoGraduacaoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/escolaridadeSpinner">
+
+                <EditText
+                    android:id="@+id/campoGraduacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a graduação aqui"
+                    android:inputType="textPersonName|textNoSuggestions|textCapWords"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoPosGraduacao"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoPosGraduacaoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoGraduacaoLayout">
+
+                <EditText
+                    android:id="@+id/campoPosGraduacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a pós-graduação aqui"
+                    android:inputType="textPersonName|textNoSuggestions|textCapWords"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/campoProfissao"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoProfissaoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoPosGraduacaoLayout">
+
+                <EditText
+                    android:id="@+id/campoProfissao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a profissão aqui"
+                    android:inputType="textPersonName|textNoSuggestions|textCapWords"
+                    android:maxLines="1"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/questionarioLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="QUESTIONÁRIO"
+                android:textAlignment="center"
+                android:textColor="@color/mediumGray"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoProfissaoLayout" />
+
+            <TextView
+                android:id="@+id/trabCriancasLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="1. Gostaria de trabalhar com crianças?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionarioLabel" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/trabCriancasSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabCriancasLabel" />
+
+            <TextView
+                android:id="@+id/trabCircOracaoLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="2. Gostaria de trabalhar com Círculo de Oração?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabCriancasSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/trabCircOracaoSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabCircOracaoLabel" />
+
+            <TextView
+                android:id="@+id/secretariaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="3. Gostaria de trabalhar com secretaria?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabCircOracaoSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/secretariaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secretariaLabel" />
+
+            <TextView
+                android:id="@+id/assistSocialLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="4. Gostaria de trabalhar com assistência social?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secretariaSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/assistSocialSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/assistSocialLabel" />
+
+            <TextView
+                android:id="@+id/comunicacaoLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="5. Gostaria de trabalhar com comunicação?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/assistSocialSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/comunicacaoSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comunicacaoLabel" />
+
+            <TextView
+                android:id="@+id/cozinhaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="6. Gostaria de trabalhar com cozinha?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comunicacaoSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/cozinhaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cozinhaLabel" />
+
+            <TextView
+                android:id="@+id/cantarLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="7. Gostaria de cantar?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cozinhaSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/cantarSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cantarLabel" />
+
+            <TextView
+                android:id="@+id/construcaoCivilLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="8. Gostaria de trabalhar com construção civil?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cantarSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/construcaoCivilSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/construcaoCivilLabel" />
+
+            <TextView
+                android:id="@+id/trabJovensLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="9. Gostaria de trabalhar com jovens?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/construcaoCivilSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/trabJovensSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabJovensLabel" />
+
+            <TextView
+                android:id="@+id/visitaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="10. Gostaria de trabalhar com visita?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabJovensSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/visitaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visitaLabel" />
+
+            <TextView
+                android:id="@+id/professorEBDLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="11. Gostaria de ser professor da EBD?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visitaSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/professorEBDSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/professorEBDLabel" />
+
+            <TextView
+                android:id="@+id/recepcaoLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="12. Gostaria de trabalhar com recepção?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/professorEBDSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/recepcaoSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recepcaoLabel" />
+
+            <TextView
+                android:id="@+id/regenciaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="13. Gostaria de trabalhar com regência?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recepcaoSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/regenciaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regenciaLabel" />
+
+            <TextView
+                android:id="@+id/zeladoriaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="14. Gostaria de trabalhar com zeladoria?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regenciaSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/zeladoriaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/zeladoriaLabel" />
+
+            <TextView
+                android:id="@+id/trabAdolescentesLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="15. Gostaria de trabalhar com adolescentes?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/zeladoriaSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/trabAdolescentesSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabAdolescentesLabel" />
+
+            <TextView
+                android:id="@+id/evangelismoMissoesLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="16. Gostaria de trabalhar com evangelismo/missões?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trabAdolescentesSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/evangelismoMissoesSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/evangelismoMissoesLabel" />
+
+            <TextView
+                android:id="@+id/tesourariaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="17. Gostaria de trabalhar com a tesouraria?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/evangelismoMissoesSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/tesourariaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tesourariaLabel" />
+
+            <TextView
+                android:id="@+id/estudoBiblicoLarLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="18. Gostaria de trabalhar com estudo bíblico no lar?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tesourariaSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/estudoBiblicoLarSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estudoBiblicoLarLabel" />
+
+            <TextView
+                android:id="@+id/decoracaoLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="19. Gostaria de trabalhar com decoração?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estudoBiblicoLarSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/decoracaoSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/decoracaoLabel" />
+
+            <TextView
+                android:id="@+id/segurancaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="20. Gostaria de trabalhar com segurança?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/decoracaoSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/segurancaSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/segurancaLabel" />
+
+            <TextView
+                android:id="@+id/sonoplastiaSomLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="21. Gostaria de trabalhar com sonoplastia (som)?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/segurancaSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sonoplastiaSomSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sonoplastiaSomLabel" />
+
+            <TextView
+                android:id="@+id/instrumentoLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="22. Gostaria de tocar algum instrumento?"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sonoplastiaSomSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/instrumentoSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/mediumGray"
+                android:textSize="16sp"
+                android:theme="@style/AppTheme.SpinnerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instrumentoLabel" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoInstrumentoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instrumentoSpinner">
+
+                <EditText
+                    android:id="@+id/campoInstrumento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="23. Há preferência por algum instrumento?"
+                    android:inputType="textNoSuggestions|textCapSentences"
+                    android:maxLines="2"
+                    android:nextFocusDown="@id/campoOutros"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoOutrosLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:focusableInTouchMode="true"
+                android:theme="@style/TextInputLayoutStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoInstrumentoLayout">
+
+                <EditText
+                    android:id="@+id/campoOutros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="24. Outros:"
+                    android:inputType="textNoSuggestions|textCapSentences"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/buttonCadastroUsuario"
+                    android:textColor="@color/mediumGray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonCadastroUsuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/enabled_rounded_button"
+                android:text="Cadastrar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campoOutrosLayout"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarCadastroUsuario"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "285602385187",
+    "firebase_url": "https://adformsstk.firebaseio.com",
+    "project_id": "adformsstk",
+    "storage_bucket": "adformsstk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285602385187:android:fd92859be229b75f761096",
+        "android_client_info": {
+          "package_name": "br.adforms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285602385187-puaka2usuv1mtb34aku5rkno1ptk2hde.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.adforms",
+            "certificate_hash": "9b7cf77234407f1ecb5a42a3d0fcc07a61a5afe8"
+          }
+        },
+        {
+          "client_id": "285602385187-7q3rujfnei9islpglv7hdt9g7guin3ts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJQC7AeoJVB5A-gJL9To2jodATpLV1qaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285602385187-7q3rujfnei9islpglv7hdt9g7guin3ts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

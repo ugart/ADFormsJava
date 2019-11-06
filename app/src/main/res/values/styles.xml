@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorHint">@color/mediumGray</item>
+        <item name="android:textColorHighlight">@color/green</item>
+        <item name="colorControlNormal">@color/mediumGray</item>
+        <item name="colorAccent">@color/mediumGray</item>
+        <item name="colorControlActivated">@color/mediumGray</item>
+        <item name="colorControlHighlight">@color/mediumGray</item>
+    </style>
+
+    <style name="Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="colorAccent">@color/green</item>
+    </style>
+
+    <style name="DialogError" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="colorAccent">@color/red</item>
+    </style>
+
+    <style name="ToggleButton">
+        <item name="android:colorControlActivated">@color/blue</item>
+        <item name="android:colorControlNormal">@color/mediumGray</item>
+    </style>
+
+    <style name="ProgressBar" parent="AppTheme">
+        <item name="colorAccent">@color/mediumGray</item>
+    </style>
+
+    <style name="AppTheme.SpinnerTheme">
+        <item name="colorPrimary">@color/mediumGray</item>
+        <item name="colorPrimaryDark">@color/mediumGray</item>
+        <item name="colorAccent">@color/mediumGray</item>
+        <item name="android:textColor">@color/mediumGray</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>0
+    </style>
+
+    <style name="AppTheme.NoActionBar.Activity" parent="AppTheme.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+</resources>
