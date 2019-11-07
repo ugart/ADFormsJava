@@ -11,7 +11,8 @@ import retrofit2.http.POST;
 
 class NetworkClient {
 
-    private final static String BASE_URL = "http://192.168.203.113:3000/";
+//    private final static String BASE_URL = "http://192.168.203.113:3000/"; //local
+    private final static String BASE_URL = "https://adforms.herokuapp.com/"; //heroku
 
     public interface WebServiceAPI {
 
