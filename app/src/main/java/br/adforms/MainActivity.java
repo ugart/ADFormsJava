@@ -766,6 +766,7 @@ public class MainActivity extends AppCompatActivity {
         String telefone = campoTelefone.getText().toString().trim();
         String dataNascimento = campoNascimento.getText().toString().trim();
         String dataBatismoAguas = campoBatismoAguas.getText().toString().trim();
+        String[] words = campoNome.getText().toString().split("\\s+");
 
         if (campoCongregacao.length() == 0) {
             campoCongregacao.setError("Você precisa informar sua congregação.");
@@ -774,9 +775,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (campoNome.length() == 0) {
-            campoNome.setError("Você precisa informar seu nome completo.");
+            campoNome.setError("O campo nome não pode estar vazio.");
             campoNome.requestFocus();
             return;
+        }
+
+        if (campoNome.length() != 0) {
+            if (words.length < 2) {
+                campoNome.setError("Você precisa informar seu nome completo.");
+                campoNome.requestFocus();
+                return;
+            }
         }
 
         if (campoIdade.length() == 0) {
@@ -1100,7 +1109,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (Utils.isConnectedToInternet(this)) {
-            login();
+            cadastrar();
         } else {
             Snackbar snack = Snackbar.make(
                     constraintLayoutMain, "Você está sem conexão com a internet",
@@ -1129,8 +1138,10 @@ public class MainActivity extends AppCompatActivity {
         campoCongregacaoLayout.requestFocus();
     }
 
-    public void login() {
+    public void cadastrar() {
         progressBarCadastroUsuario.setVisibility(VISIBLE);
+        buttonCadastroUsuario.setEnabled(false);
+        buttonCadastroUsuario.setBackgroundResource(R.drawable.disabled_rounded_button);
 
         Usuario newUser = new Usuario();
         newUser.setCongregacao(campoCongregacao.getText().toString().trim());
@@ -1179,6 +1190,8 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        buttonCadastroUsuario.setEnabled(true);
+                        buttonCadastroUsuario.setBackgroundResource(R.drawable.enabled_rounded_button);
                         progressBarCadastroUsuario.setVisibility(GONE);
 
                         Usuario result = response.body();
@@ -1203,7 +1216,16 @@ public class MainActivity extends AppCompatActivity {
                         } else {
 
                             final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.DialogError);
-                            builder.setMessage("Infelizmente, algo deu errado");
+                            builder.setTitle("Opa, temos um problema!");
+
+                            if (response.code() == 400) {
+                                builder.setMessage("Verifique os campos e tente novamente.");
+                            } else if (response.code() == 500) {
+                                builder.setMessage("Erro interno de servidor.");
+                            } else {
+                                builder.setMessage("Aconteceu algum erro inesperado...");
+                            }
+
                             builder.setCancelable(false);
 
                             builder.setPositiveButton("Tentar novamente", new DialogInterface.OnClickListener() {
@@ -1211,6 +1233,13 @@ public class MainActivity extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     dialogInterface.dismiss();
                                     validationCadastro();
+                                }
+                            });
+
+                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.dismiss();
                                 }
                             });
 
@@ -1222,6 +1251,8 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<Usuario> call, Throwable t) {
+                        buttonCadastroUsuario.setEnabled(true);
+                        buttonCadastroUsuario.setBackgroundResource(R.drawable.enabled_rounded_button);
                         progressBarCadastroUsuario.setVisibility(GONE);
 
                         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.DialogError);
@@ -1265,4 +1296,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
